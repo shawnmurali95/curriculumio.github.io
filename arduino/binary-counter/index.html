@@ -1,12 +1,531 @@
-<html>
-	<head>
-	</head>
-	<body>
-		curriculum starts here!
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
 
-		 
-<h1><a id="test" class="anchor" href="#test" data-text="test" data-ref="test" data-level="1"><span class="header-link"></span></a>test</h1><p>test</p>
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Material Design Lite</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-orange.min.css"/>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--red-600 mdl-color-text--white">
+        <div class="mdl-layout__header-row" style="background:rgba(0, 0, 0, 0.1)">
+          <span class="mdl-layout-title">Arduino</span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search">
+              <label class="mdl-textfield__label" for="search">Enter your query...</label>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="course-ribbon mdl-color--red-600"></div>
+      <main class="demo-main mdl-layout__content">
+        <div class="demo-container mdl-grid">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+
+          <div class="course-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <div class="course-path mdl-color-text--grey-500">
+              <a href="http://127.0.0.1:8000">curriculum</a> / <a href="http://127.0.0.1:8000/arduino">Arduino</a> / 
+            </div>
+             
+<h1><a id="led-binary-counter" class="anchor" href="#led-binary-counter" data-text="LED Binary Counter" data-ref="led-binary-counter" data-level="1"><span class="header-link"></span></a>LED Binary Counter</h1><h2><a id="requirements" class="anchor" href="#requirements" data-text="Requirements" data-ref="requirements" data-level="2"><span class="header-link"></span></a>Requirements</h2><h3><a id="knowledge" class="anchor" href="#knowledge" data-text="Knowledge" data-ref="knowledge" data-level="3"><span class="header-link"></span></a>Knowledge</h3><ol>
+<li><a href="http://www.techlab.education" target="_blank" data-ref="counting-in-binary">Counting in binary</a></li>
+<li><a href="http://www.techlab.education" target="_blank" data-ref="basic-breadboard-and-circuits">Basic breadboard and circuits</a></li>
+</ol>
+<h3><a id="hardware" class="anchor" href="#hardware" data-text="Hardware" data-ref="hardware" data-level="3"><span class="header-link"></span></a>Hardware</h3><ol>
+<li>Arduino Uno board or clone</li>
+<li>Programming cable</li>
+<li>4 LEDs</li>
+<li>4 1k Ohm resistor</li>
+<li>Jumper cables</li>
+<li>Solder-less breadboard</li>
+</ol>
+<h3><a id="software" class="anchor" href="#software" data-text="Software" data-ref="software" data-level="3"><span class="header-link"></span></a>Software</h3><ol>
+<li>Arduino 1.6.9 or higher</li>
+</ol>
+<h2><a id="the-build" class="anchor" href="#the-build" data-text="The Build" data-ref="the-build" data-level="2"><span class="header-link"></span></a>The Build</h2><h3><a id="pin-to-led" class="anchor" href="#pin-to-led" data-text="Pin to LED" data-ref="pin-to-led" data-level="3"><span class="header-link"></span></a>Pin to LED</h3><p>Start off by wiring a connection from <code>GND</code> to the top of the left blue rail on the breadboard. Use a jumper to connect the from the bottom of the left blue rail to the bottom of the right blue rail. This gives your board common ground.</p>
+<p>The LED has two legs: one long, one short. It is important to note as the LED is a diode (LED stands for Light Emitting Diode) and is therefore unidirectional. The longer leg connects to positive voltage and the short leg connects to ground. Install your LED such that the long leg is in a row on the left side of your breadboard and the short leg is in the same row on the right side.</p>
+<p>The LED will burn out if we connect it directly to 5v, so it must be wired in series with a resistor. Connect the ground side of the LED to ground with a 1k resistor. </p>
+<p>Wire pin <code>13</code> from the Arduino to the power side of the LED. When pin <code>13</code> is written <code>HIGH</code> the LED will light, and when written <code>LOW</code> the LED will power off. At this point the project should match this diagram.</p>
+<p><img src="https://github.com/shawnmurali95/arduino/blob/master/binary-counter/ledcircuit.png?raw=true" alt="single led"></p>
+<p>Repeat these steps to wire thr<code>ee more LEDs to pins</code>10<code>,</code>11<code>, and</code>12`. At this point the project should match this diagram.</p>
+<p><img src="https://github.com/shawnmurali95/arduino/blob/master/binary-counter/4ledcircuit.png?raw=true" alt="4 leds"></p>
+<h2><a id="making-the-sketch" class="anchor" href="#making-the-sketch" data-text="Making the Sketch" data-ref="making-the-sketch" data-level="2"><span class="header-link"></span></a>Making the Sketch</h2><h3><a id="the-basics" class="anchor" href="#the-basics" data-text="The Basics" data-ref="the-basics" data-level="3"><span class="header-link"></span></a>The Basics</h3><p>Every sketch should include the following code stubs: </p>
+<pre><code class="lang-c">void setup() {
+
+}
+void loop() {
+
+}
+</code></pre>
+<p>The <code>setup()</code> method runs once when the program initializes and is never called again by the Arduino afterwards. The <code>loop()</code> method is then called repeatedly until the machine is powered down.</p>
+<p>From this common skeleton, there are three different approaches to programming the binary counter. The approaches are outlined below in order of complexity.</p>
+<p>###Approach 1: Hard-Coded Pattern
+Hard-coding a pattern is conceptually the simplest way to program the binary counter. However, it is tedious to code and is not as extendable as the other methods. </p>
+<h4><a id="defining-variables" class="anchor" href="#defining-variables" data-text="Defining Variables" data-ref="defining-variables" data-level="4"><span class="header-link"></span></a>Defining Variables</h4><p>At the top of the sketch, define four constants to define the pins connected to the LEDs. Also, declare an <code>int</code> variable, which will be used as our counter.</p>
+<pre><code class="lang-c">#define LED0 10
+#define LED1 11
+#define LED2 12
+#define LED3 13
+
+int i = 0;
+</code></pre>
+<h4><a id="defining-methods" class="anchor" href="#defining-methods" data-text="Defining Methods" data-ref="defining-methods" data-level="4"><span class="header-link"></span></a>Defining Methods</h4><p>In <code>void setup()</code>, set pins <code>10</code> through <code>13</code> to <code>OUTPUT</code>. Also begin <code>Serial</code> at a baud-rate of 9600 for debug purposes.</p>
+<pre><code class="lang-c">void setup() {
+    Serial.begin(9600);
+    pinMode(LED0, OUTPUT);
+    pinMode(LED1, OUTPUT);
+    pinMode(LED2, OUTPUT);
+    pinMode(LED3, OUTPUT);
+}
+</code></pre>
+<p>Before finishing the currently empty <code>void loop()</code>, define another method <code>void displayPattern(int led3, int led2, int led1, int led0)</code>. This method will check each LED, and light it up if its corresponding <code>led</code> integer is <code>1</code>. Conditional branching will be useful here.</p>
+<pre><code class="lang-c">void displayPattern(int led3, int led2, int led1, int led0) {
+    if (led3 == 1) {
+        digitalWrite(LED3, HIGH);
+    } else {
+        digitalWrite(LED3, LOW);
+    }
+    if (led2 == 1) {
+        digitalWrite(LED2, HIGH);
+    } else {
+        digitalWrite(LED2, LOW);
+    }
+    if (led1 == 1) {
+        digitalWrite(LED1, HIGH);
+    } else {
+        digitalWrite(LED1, LOW);
+    }
+    if (led0 == 1) {
+        digitalWrite(LED0, HIGH);
+    } else {
+        digitalWrite(LED0, LOW);
+    }
+}
+</code></pre>
+<p>Now define the <code>void loop()</code> body. Depending on the integer <code>i</code>, call <code>displayPattern(int led3, int led2, int led1, int led0)</code> on the corresponding binary representation of <code>i</code>. For example, an <code>i</code> value of <code>3</code> would yield the call <code>displayPattern(0,0,1,1);</code> (recall from the lesson on binary counting that this representation is Big Endian). Then increment <code>i</code> by one; <code>i</code> must also be reset to <code>0</code> when it reaches <code>16</code>. Finally, add a one second delay so that our counter will increment once per second. Switch-case will be useful here, but conditional branching can also be used. The switch-case method is shown below.</p>
+<pre><code class="lang-c">void loop() {
+    switch(i) {
+        case 0:
+            displayPattern(0,0,0,0);
+            break;
+        case 1:
+            displayPattern(0,0,0,1);
+            break;
+        case 2:
+            displayPattern(0,0,1,0);
+            break;
+        case 3:
+            displayPattern(0,0,1,1);
+            break;
+        case 4:
+            displayPattern(0,1,0,0);
+            break;
+        case 5:
+            displayPattern(0,1,0,1);
+            break;
+        case 6:
+            displayPattern(0,1,1,0);
+            break;
+        case 7:
+            displayPattern(0,1,1,1);
+            break;
+        case 8:
+            displayPattern(1,0,0,0);
+            break;
+        case 9:
+            displayPattern(1,0,0,1);
+            break;
+        case 10:
+            displayPattern(1,0,1,0);
+            break;
+        case 11:
+            displayPattern(1,0,1,1);
+            break;
+        case 12:
+            displayPattern(1,1,0,0);
+            break;
+        case 13:
+            displayPattern(1,1,0,1);
+            break;
+        case 14:
+            displayPattern(1,1,1,0);
+            break;
+        case 15:
+            displayPattern(1,1,1,1);
+            break;
+    }
+    i++;
+    if (i == 16) {
+        i = 0;
+    }
+    delay(1000);
+}
+</code></pre>
+<p>Here is the sketch all together.</p>
+<pre><code class="lang-c">#define LED0 10
+#define LED1 11
+#define LED2 12
+#define LED3 13
+
+int i = 0;
+
+void setup() {
+    Serial.begin(9600);
+    pinMode(LED0, OUTPUT);
+    pinMode(LED1, OUTPUT);
+    pinMode(LED2, OUTPUT);
+    pinMode(LED3, OUTPUT);
+}
+
+void loop() {
+    switch(i) {
+        case 0:
+            displayPattern(0,0,0,0);
+            break;
+        case 1:
+            displayPattern(0,0,0,1);
+            break;
+        case 2:
+            displayPattern(0,0,1,0);
+            break;
+        case 3:
+            displayPattern(0,0,1,1);
+            break;
+        case 4:
+            displayPattern(0,1,0,0);
+            break;
+        case 5:
+            displayPattern(0,1,0,1);
+            break;
+        case 6:
+            displayPattern(0,1,1,0);
+            break;
+        case 7:
+            displayPattern(0,1,1,1);
+            break;
+        case 8:
+            displayPattern(1,0,0,0);
+            break;
+        case 9:
+            displayPattern(1,0,0,1);
+            break;
+        case 10:
+            displayPattern(1,0,1,0);
+            break;
+        case 11:
+            displayPattern(1,0,1,1);
+            break;
+        case 12:
+            displayPattern(1,1,0,0);
+            break;
+        case 13:
+            displayPattern(1,1,0,1);
+            break;
+        case 14:
+            displayPattern(1,1,1,0);
+            break;
+        case 15:
+            displayPattern(1,1,1,1);
+            break;
+    }
+    i++;
+    if (i == 16) {
+        i = 0;
+    }
+    delay(1000);    
+}
+
+void displayPattern(int led3, int led2, int led1, int led0) {
+    if (led3 == 1) {
+        digitalWrite(LED3, HIGH);
+    } else {
+        digitalWrite(LED3, LOW);
+    }
+    if (led2 == 1) {
+        digitalWrite(LED2, HIGH);
+    } else {
+        digitalWrite(LED2, LOW);
+    }
+    if (led1 == 1) {
+        digitalWrite(LED1, HIGH);
+    } else {
+        digitalWrite(LED1, LOW);
+    }
+    if (led0 == 1) {
+        digitalWrite(LED0, HIGH);
+    } else {
+        digitalWrite(LED0, LOW);
+    }
+}
+</code></pre>
+<p>###Approach 2: Reading from a Byte
+This method takes advantage of the fact that computers store decimal numbers in binary. Using a <code>byte</code> to store the number is better in this case than using <code>int</code> because the built counter is only 4 bits. Thus, as far as this program is concerned, only the first 4 bits of the <code>byte</code> are read.</p>
+<p>####Defining Variables
+Define an <code>int</code> array <code>pins</code> to store the indexes of the pins connected to the LEDs. Also define a <code>byte num</code> to store the number being displayed.</p>
+<pre><code class="lang-c">int pins[4] = {13, 12, 11, 10};
+byte num = 0;
+</code></pre>
+<p>####Defining Methods
+In <code>void setup()</code> set the mode of each pin in <code>pins</code> to <code>OUTPUT</code> using a for-loop. Also begin the <code>Serial</code> at the baud-rate <code>9600</code> for debugging purposes.</p>
+<pre><code class="lang-c">void setup(){
+    Serial.begin(9600);
+    for (int i = 0; i &lt; 4; i++) {
+        pinMode(pins[i], OUTPUT);
+    } 
+}
+</code></pre>
+<p>The idea behind this approach is to increment <code>byte num</code> and display the first 4 bits as an LED output. Inside <code>void loop()</code> call the as-of-yet unimplemented <code>void displayBits()</code> with <code>num</code> as the argument, increment <code>num</code>, and check if <code>num</code> has exceeded 15 (the highest number we can count with 4 bits) and reset it to 0 if it has. Add a delay to see the result.</p>
+<pre><code class="lang-c">void loop() {
+    displayBits(num);
+    num++;
+    if(num&gt;15){
+        num = 0;
+    }
+    delay(1000);
+}
+</code></pre>
+<p>To implement <code>void displayBits(byte num)</code> use the built in <code>bitRead()</code> method built into the Arduino library. <code>bitRead()</code> takes two arguments of type <code>byte</code> and <code>int</code>. The <code>byte</code> is the <code>byte</code> from which the bit is read and the <code>int</code> is the <code>int</code> position of the bit that is to be read. An example of its use is as follows:</p>
+<pre><code class="lang-c">Serial.println(bitRead(3,1));
+</code></pre>
+<p>This would print on the <code>Serial</code> the value 1. $3_{10}$ is represented in binary as $0000011_2$ in a <code>byte</code>. Position 1 is the second bit from the right (think array notation).</p>
+<p>In order to get the first 4 bits from the <code>byte</code> use <code>readBit()</code> inside a for-loop with position incrementing from 0 to 3. Use this read bit to set the corresponding LED either <code>HIGH</code> or <code>LOW</code>.</p>
+<pre><code class="lang-c">void displayBits(byte num){
+    for (int i = 0; i &lt; 4; i++) {
+        if (bitRead(num, i) == 1) {
+            digitalWrite(pins[i], HIGH);
+        } else {
+            digitalWrite(pins[i], LOW);
+        }
+    }
+}
+</code></pre>
+<p>Bringing this all together the sketch is as follows.</p>
+<pre><code class="lang-c">int pins[4] = {13, 12, 11, 10};
+byte num = 0;
+
+void setup(){
+    Serial.begin(9600);
+    for (int i = 0; i &lt; 4; i++) {
+        pinMode(pins[i], OUTPUT);
+    } 
+}
+
+void loop() {
+    displayBits(num);
+    num++;
+    if(num&gt;15){
+        num = 0;
+    }
+    delay(1000);
+}
+
+void displayBits(byte num){
+    for (int i = 0; i &lt; 4; i++) {
+        if (bitRead(num, i) == 1) {
+            digitalWrite(pins[i], HIGH);
+        } else {
+            digitalWrite(pins[i], LOW);
+        }
+    }
+}
+</code></pre>
+<h3><a id="approach-3-finite-state-machine" class="anchor" href="#approach-3-finite-state-machine" data-text="Approach 3: Finite State Machine" data-ref="approach-3-finite-state-machine" data-level="3"><span class="header-link"></span></a>Approach 3: Finite State Machine</h3><p>A finite state machine works by determining its next state based on its previous state, based on rules applied to state variables. In this method, the binary counter will be programmed as a state machine with 4 state variables (one for the state of each LED).</p>
+<h4><a id="defining-variables" class="anchor" href="#defining-variables" data-text="Defining Variables" data-ref="defining-variables" data-level="4"><span class="header-link"></span></a>Defining Variables</h4><p>At the top of the sketch, define an array to store the pins connected to the LEDs, and another array to store the state in which the LED should be (on or off). <code>pins</code> will be an array of type <code>int</code> and    <code>states</code> will be an array of type <code>bool</code> as follows:</p>
+<pre><code class="lang-c">int pins[4] = {10, 11, 12, 13};
+bool states[4] = {false, false, false, false};
+</code></pre>
+<p>Using this syntax, the values inside the <code>{}</code> are stored in the array. The first line designates pins <code>10</code>, <code>11</code>, <code>12</code>, and <code>13</code> as pins with LEDs connected to them. The second line designates the start state of each bit as &quot;off&quot; ($0000_2$).</p>
+<p>####Defining Methods
+Inside <code>void setup()</code>, use a for-loop to designate each pin in <code>pins</code> as an <code>OUTPUT</code>. Also start the <code>Serial</code> to read at the baud-rate <code>9600</code>.</p>
+<pre><code class="lang-c">void setup() {
+    Serial.begin(9600);
+    for (int i = 0; i &lt; 4; i++) {
+        pinMode(pins[i], OUTPUT);
+    }
+}
+</code></pre>
+<p>The algorithm needs to continually display the state of the LEDs, change the state, display them again, and so on. Inside <code>void loop()</code>, write the following methods <code>displayState()</code>and<code>changeState()</code> (as of now, these are unimplemented). Add a 1-second <code>delay</code> to temporarily halt execution after each call of loop.</p>
+<pre><code class="lang-c">void loop() {
+    displayState();
+    changeState();
+    delay(1000);
+}
+</code></pre>
+<p>Our methods <code>displayState()</code> and <code>changesState()</code> are <code>void</code> methods, which means that they do not return a value. They will called repeatedly because they are inside <code>void loop()</code>.</p>
+<p>Below <code>void setup()</code> and <code>void loop()</code>, create the method <code>void displayState()</code>. For each state in <code>states</code>, output a <code>HIGH</code> if the state is true and a <code>LOW</code> if the state is false. A for-loop will again prove useful here.</p>
+<pre><code class="lang-c">if (states[i] == true) {
+    digitalWrite(pins[i], HIGH);
+} else {
+    digitalWrite(pins[i], LOW);
+}
+</code></pre>
+<p>The code for change state is a little less straightforward, but follows the simple rules for counting. The algorithm checks each state sequentially.</p>
+<p>If the state is <code>true</code>, its next state will also be <code>true</code> if any of the less significant bits are in a <code>false</code>state. Use nested for-loops to implement this part of the algorithm.</p>
+<pre><code class="lang-c">void changeState() {
+    for (int i = 0; i &lt; 4; i++) {
+        if (states[i] == true) {
+            bool anyBitOff = false;
+            for (int j = i + 1; j &lt; 4; j++) {
+                if (states[j] == false) {
+                    anyBitOff = true;
+                }
+            }
+            states[i] = anyBitOff;
+        }
+        ...
+</code></pre>
+<p>Look closely at some key parts. Initializing the <code>bool anyBitOff</code> to false ensures that at least one of the less-significant bits must be <code>false</code> before we set <code>anyBitOff</code> to <code>true</code>. The line <code>if (states[j] == false) {</code> sets <code>anyBitOff</code> to <code>true</code> if any less-significant bit is found to be <code>false</code>. Remember, the value of <code>anyBitOff</code> does not change from its initial <code>false</code> state unless the criteria have been met.</p>
+<p>When the current bit is in a <code>false</code> state, its next state will be <code>true</code> if all of the less-significant bits are in a <code>true</code> state. This can again be achieved with nested for-loops.</p>
+<pre><code class="lang-c">void changeState() {
+    for (int i = 0; i &lt; 4; i++) {
+        if (states[i] == true) {
+            bool anyBitOff = false;
+            for (int j = i + 1; j &lt; 4; j++) {
+                if (anyBitOff == false){
+                    anyBitOff = (states[j] == false);
+                }
+            }
+            states[i] = anyBitOff;
+        } else {
+            bool everyBitOn = true;
+            for (int j = i + 1; j &lt; 4; j++) {
+                if (states[j] == false) {
+                    everyBitOn = false;
+                }
+            }
+            states[i] = everyBitOn;
+        }
+    }
+</code></pre>
+<p>Again, the key parts here are the initialization of <code>bool everyBitOn</code> and the branching conditional <code>if (states[j] == false) {</code>. This in effect mirrors the previous segment of code. The initialization of  <code>everyBitOn</code>to<code>true</code> asserts that all of the less-significant bits are <code>true</code> until one is shown to be <code>false</code>. The statement <code>if (states[j] == false) {</code> changes <code>everyBitOn</code> to false if any of the less-significant bits are <code>false</code>. Remember, the value of <code>everyBitOn</code> does not change from its initial <code>true</code> state unless the criteria have been met.</p>
+<p>This is the full implementation of the counting algorithm in our sketch.</p>
+<pre><code class="lang-c">//called once on startup
+void setup() {
+    Serial.begin(9600);
+    for (int i = 0; i &lt; 4; i++) {
+        pinMode(pins[i], OUTPUT);
+    }
+}
+
+//called repeatedly until poweroff
+void loop() {
+    displayState();
+    changeState();
+    delay(1000);
+}
+
+//turns LEDs on and off based on states
+void displayState() {
+    for (int i = 0; i &lt; 4; i++) {
+        int output = LOW;
+        if (states[i] == true) {
+            output = HIGH;
+        }
+        digitalWrite(pins[0],output);
+    }
+}
+
+//changes states from one state to the next
+void changeState() {
+    for (int i = 0; i &lt; 4; i++) {
+        if (states[i] == true) {
+            bool anyBitOff = false;
+            for (int j = i + 1; j &lt; 4; j++) {
+                if (states[j] == false) {
+                    everyBitOn = true;
+                }
+            }
+            states[i] = anyBitOff;
+        } else {
+            bool everyBitOn = true;
+            for (int j = i + 1; j &lt; 4; j++) {
+                if (states[j] == false) {
+                    everyBitOn = false;
+                }
+            }
+            states[i] = everyBitOn;
+        }
+    }
+</code></pre>
 
 
-	</body>
+          </div>
+        </div>
+        <footer class="demo-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Privacy and Terms</a></li>
+              <li><a href="#">User Agreement</a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <!-- <a href="https://github.com/google/material-design-lite/blob/master/templates/article/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>
